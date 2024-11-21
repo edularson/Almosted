@@ -1,0 +1,155 @@
+:root {
+    --cor-fundo-header: #ffffff;
+    --cor-texto-header: rgb(0, 0, 0);
+    --cor-fundo-footer: #000000;
+    --cor-texto-footer: rgb(255, 255, 255);
+    --cor-borda: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-fundo-header);
+    color: var(--cor-texto-header);
+    padding: 10px 20px;
+}
+
+.nav-left {
+    flex: 1;
+}
+
+.nav-left ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-left ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-left ul li a {
+    color: var(--cor-texto-header);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-left ul li a:hover {
+    color: #3b3b3b;
+}
+
+.logo {
+    flex: 0 0 auto; /* A logo não cresce nem encolhe */
+    text-align: center;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Alinha os ícones à direita */
+}
+
+.nav-right .icon {
+    width: 30px;
+    height: auto;
+    margin-left: 15px;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 10px;
+}
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.produto {
+    flex: 0 0 22%; /* Ajusta a largura para 22% para permitir quatro produtos por linha */
+    margin-bottom: 20px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: var(--cor-fundo-footer);
+    color: var(--cor-texto-footer);
+    font-family: 'Arial', sans-serif;
+    font-size: 14px; /* Tamanho da fonte do footer */
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 16px; /* Tamanho da fonte dos títulos no footer */
+}
+
+.footer-section a {
+    color: var(--cor-texto-footer); /* Garantindo que os links sejam brancos */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 14px; /* Tamanho da fonte dos links no footer */
+}
+
+.footer-section a:hover {
+    color: #ccc; /* Cor ao passar o mouse */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--cor-borda);
+}
+
+.footer-section ul.social-icons {
+    display: flex; /* Usar flexbox para alinhar horizontalmente */
+    justify-content: space-around; /* Espaçar os itens uniformemente */
+    padding:  0; /* Remover padding */
+    margin: 0; /* Remover margin */
+}
+
+.footer-section ul.social-icons li {
+    margin: 0 10px; /* Espaçamento entre os ícones */
+}

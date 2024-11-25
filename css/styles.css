@@ -6,11 +6,17 @@
     --cor-borda: #333;
 }
 
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
 }
 
 header {
@@ -48,7 +54,7 @@ header {
 }
 
 .logo {
-    flex: 0 0 auto; /* A logo não cresce nem encolhe */
+    flex: 0 0 auto;
     text-align: center;
 }
 
@@ -60,7 +66,7 @@ header {
 .nav-right {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* Alinha os ícones à direita */
+    justify-content: flex-end;
 }
 
 .nav-right .icon {
@@ -86,7 +92,7 @@ h2 {
 }
 
 .produto {
-    flex: 0 0 22%; /* Ajusta a largura para 22% para permitir quatro produtos por linha */
+    flex: 0 0 22%;
     margin-bottom: 20px;
     border: 1px solid var(--cor-borda);
     border-radius: 5px;
@@ -106,7 +112,8 @@ footer {
     background-color: var(--cor-fundo-footer);
     color: var(--cor-texto-footer);
     font-family: 'Arial', sans-serif;
-    font-size: 14px; /* Tamanho da fonte do footer */
+    font-size: 14px;
+    margin-top: auto;
 }
 
 .footer-section {
@@ -115,17 +122,17 @@ footer {
 
 .footer-section h3 {
     margin-bottom: 15px;
-    font-size: 16px; /* Tamanho da fonte dos títulos no footer */
+    font-size: 16px;
 }
 
 .footer-section a {
-    color: var(--cor-texto-footer); /* Garantindo que os links sejam brancos */
-    text-decoration: none; /* Remove o sublinhado */
-    font-size: 14px; /* Tamanho da fonte dos links no footer */
+    color: var(--cor-texto-footer);
+    text-decoration: none;
+    font-size: 14px;
 }
 
 .footer-section a:hover {
-    color: #ccc; /* Cor ao passar o mouse */
+    color: #ccc;
 }
 
 .footer-section ul {
@@ -144,12 +151,198 @@ footer {
 }
 
 .footer-section ul.social-icons {
-    display: flex; /* Usar flexbox para alinhar horizontalmente */
-    justify-content: space-around; /* Espaçar os itens uniformemente */
-    padding:  0; /* Remover padding */
-    margin: 0; /* Remover margin */
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-section ul.social-icons li {
-    margin: 0 10px; /* Espaçamento entre os ícones */
+    margin: 0 10px;
+}
+
+.preco-antigo {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.preco-novo {
+    color: #000000;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+p {
+    text-align: justify;
+}
+
+.btn-custom {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+.product-images {
+    text-align: center;
+}
+
+.product-images .img-thumbnail {
+    max-width: 100px;
+    height: auto;
+    border: 1px solid var(--cor-borda);
+}
+
+.main-image img {
+    max-width: 100%;
+    border: 2px solid var(--cor-borda);
+}
+
+.size-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sizes .btn {
+    margin-right: 10px;
+}
+
+.product-buttons .btn-custom {
+    margin-bottom: 10px;
+}
+
+.product-buttons .btn-custom:hover {
+    background-color: var(--cor-fundo-header);
+    color: var(--cor-texto-header);
+    border: 1px solid var(--cor-borda);
+}
+
+/* Adicionar um efeito de escala quando o mouse passar sobre o produto */
+.produto:hover {
+    transform: scale(1.05); /* Aumenta a imagem */
+    transition: transform 0.3s ease; /* Suaviza o aumento */
+    text-decoration: none;
+}
+
+/* Tornar a área do produto um link clicável */
+.produto-link {
+    display: block; /* Faz com que o link ocupe toda a área do produto */
+    text-decoration: none !important; /* Remover sublinhado e garantir que a regra seja aplicada */
+    color: inherit; /* Herda a cor do texto */
+}
+
+/* Remover sublinhado ao passar o mouse */
+.produto-link:hover {
+    text-decoration: none !important; /* Remover sublinhado durante o hover */
+    color: #3b3b3b; /* Cor ao passar o mouse */
+}
+
+/* Garantir que não haja sublinhado dentro do produto */
+.produto-link p, .produto-link p:hover {
+    text-decoration: none; /* Remover sublinhado do texto dentro do link */
+}
+
+/* Efeito de hover para o contorno do produto */
+.produto-link:hover .produto {
+    border-color: #3b3b3b; /* Mudar cor da borda no hover */
+}
+
+/* Garantir que o título também não tenha sublinhado no hover */
+.produto-link p:hover {
+    color: #3b3b3b; /* Mudar cor do texto */
+    text-decoration: none; /* Garantir que não haja sublinhado */
+}
+
+/* Estilo da aba lateral do carrinho */
+#cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -33%;
+    width: 33%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+#cart-sidebar.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--cor-borda);
+    background-color: var(--cor-fundo-header);
+}
+
+.cart-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+#close-cart {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-items {
+    padding: 15px;
+}
+
+.cart-item {
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.cart-item img {
+    width: 60px;
+    height: auto;
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+}
+
+.details {
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+.cart-footer {
+    padding: 15px;
+    border-top: 1px solid var(--cor-borda);
+}
+
+.cart-footer button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cart-footer button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
 }

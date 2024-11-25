@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto - Almosted</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-left">
+            <ul>
+                <li><a href="Home.html">HOME</a></li>
+                <li><a href="Shop.html">SHOP</a></li>
+                <li><a href="Outlet.html">OUTLET</a></li>
+                <li><a href="Sobre.html">SOBRE</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="Home.html"><img src="images/LogoAlmostedSemFundo.png" alt="Logo Almosted"></a>
+        </div>
+        <div class="nav-right">
+            <a href="#"><img src="images/signoBuscar.png" alt="Buscar" class="icon"></a>
+            <a href="IniciarSessao.html"><img src="images/signoUser.png" alt="Perfil" class="icon"></a>
+            <a href="#"><img src="images/signoSacola.png" alt="Carrinho" class="icon"></a>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <!-- Imagens do Produto -->
+            <div class="col-md-6">
+                <div class="product-images">
+                    <div class="main-image mb-3">
+                        <img id="mainImage" src="images/camisetaBege-removebg-preview.png" alt="T-shirt Oversized - Preto" class="img-fluid border">
+                    </div>
+                    <div class="d-flex justify-content-start">
+                        <img src="images/camisetaBege-removebg-preview.png" alt="Imagem lateral" class="img-thumbnail mx-1 thumbnail">
+                        <img src="images/camisetaBege_tras-removebg-preview.png" alt="Imagem costas" class="img-thumbnail mx-1 thumbnail">
+                        <img src="images/tabelamedidasoversized-removebg-preview.png" alt="Dimensões" class="img-thumbnail mx-1 thumbnail">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detalhes do Produto -->
+            <div class="col-md-6">
+                <h2>T-SHIRT OVERSIZED - BLACK</h2>
+                <p>
+                    <span class="preco-antigo">R$ 259,90</span>
+                    <span class="preco-novo">R$ 199,90</span>
+                </p>
+                <p class="size-title">TAMANHO:</p>
+                <div class="sizes mb-3">
+                    <button class="btn btn-outline-secondary">S</button>
+                    <button class="btn btn-outline-secondary">M</button>
+                    <button class="btn btn-outline-secondary">L</button>
+                    <button class="btn btn-outline-secondary">XL</button>
+                </div>
+                <div class="product-buttons">
+                    <button class="btn-custom btn-lg btn-block mb-3">COMPRAR</button>
+                    <button class="btn-custom btn-lg btn-block" data-toggle="modal" data-target="#tabelaModal">Tabela de Medidas</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="tabelaModal" tabindex="-1" aria-labelledby="tabelaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tabelaModalLabel">Tabela de Medidas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="images/tabelamedidasoversized-removebg-preview.png" alt="Tabela de Medidas" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h3>FALE CONOSCO</h3>
+            <ul>
+                <li><a href="#">Apoio ao Cliente</a></li>
+                <li><a href="#">Perguntas Frequentes</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>PEDIDOS E ENTREGAS</h3>
+            <ul>
+                <li><a href="#">Devoluções</a></li>
+                <li><a href="#">Como pedir</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>SOCIAL</h3>
+            <ul class="social-icons">
+                <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Script para trocar a imagem principal ao clicar em uma miniatura
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.getElementById('mainImage');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                mainImage.src = thumbnail.src;
+                mainImage.alt = thumbnail.alt;
+            });
+        });
+    </script>
+</body>
+
+</html>

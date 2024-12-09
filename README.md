@@ -31,7 +31,7 @@ Desenvolver um site funcional para a loja **Almosted**, com foco nos seguintes a
 - Feedback visual e interações aprimoradas.
 
 ## 📸 Demonstração
-![Homepage](./public/assets/FotoSite.png)
+![Homepage](reactalmosted/public/assets/FotoSite.png)
 
 
 ## 📂 Estrutura do Projeto

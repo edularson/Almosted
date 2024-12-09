@@ -8,6 +8,12 @@ Este repositório contém o código-fonte do **Almosted**, um site desenvolvido 
 - [Thiago Ceron de Almeida](https://github.com/thiagoceron)
 - [João Samuel Luy](https://github.com/LuyJoao)
 
+## 🌐 Acesse o Site
+
+O site está hospedado e pode ser acessado através do seguinte link:  
+[Almosted - Loja de Roupas](https://almosted.netlify.app/)
+
+
 ## 🎯 Objetivo do Projeto
 
 Desenvolver um site funcional para a loja **Almosted**, com foco nos seguintes aspectos:

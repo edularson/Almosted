@@ -45,36 +45,35 @@ Desenvolver um site funcional para a loja **Almosted**, com foco nos seguintes a
 ```
 /src
   /components      # Componentes reutilizáveis
-    Footer.js      # Rodapé do site
-    Header.js      # Cabeçalho do site
+       Footer.js      # Rodapé do site
+       Header.js      # Cabeçalho do site
   /pages           # Páginas do site
-    ApoioCliente.js  # Página de suporte ao cliente
-    Certificacoes.js # Página sobre certificações
-    CriarConta.js    # Página de criação de conta
-    Desconto.js      # Página de descontos
-    Detalhes.js      # Página de detalhes do produto
-    Devolucao.js     # Página sobre devoluções
-    Fidelidade.js    # Página de programa de fidelidade
-    Home.js          # Página inicial
-    Impacto.js       # Página sobre impacto ambiental
-    Login.js         # Página de login
-    Materiais.js     # Página de materiais sustentáveis
-    Outlet.js        # Página de produtos em outlet
-    Perguntas.js     # Página de perguntas frequentes
-    Politica.js      # Página de política de privacidade
-    Roupas.js        # Página de roupas
-    Senha.js         # Página para recuperação de senha
-    Shop.js          # Página da loja
-    Sobre.js         # Página sobre a loja
-    Sustentavel.js   # Página sobre sustentabilidade
-    Termos.js        # Página de termos e condições
-  /styles           # Arquivos de estilo
-    estilo.css      # Estilo css
-  App.js            # Componente principal
-  index.js          # Ponto de entrada
-
-/public
+       ApoioCliente.js  # Página de suporte ao cliente
+       Certificacoes.js # Página sobre certificações
+       CriarConta.js    # Página de criação de conta
+       Desconto.js      # Página de descontos
+       Detalhes.js      # Página de detalhes do produto
+       Devolucao.js     # Página sobre devoluções
+       Fidelidade.js    # Página de programa de fidelidade
+       Home.js          # Página inicial
+       Impacto.js       # Página sobre impacto ambiental
+       Login.js         # Página de login
+       Materiais.js     # Página de materiais sustentáveis
+       Outlet.js        # Página de produtos em outlet
+       Perguntas.js     # Página de perguntas frequentes
+       Politica.js      # Página de política de privacidade
+       Roupas.js        # Página de roupas
+       Senha.js         # Página para recuperação de senha
+       Shop.js          # Página da loja
+       Sobre.js         # Página sobre a loja
+       Sustentavel.js   # Página sobre sustentabilidade
+       Termos.js        # Página de termos e condições
+       estilo.css      # Estilo css
+       App.js            # Componente principal
+       index.js          # Ponto de entrada
+  /public
   /assets           # Imagens e recursos usados diretamente no site
+
 
 ```
 
